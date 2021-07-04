@@ -58,3 +58,9 @@
 
 (after! org
   (setq org-superstar-headline-bullets-list '("⠪")))
+
+(after! rustic
+  (setq lsp-rust-server 'rust-analyzer))
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection))
